@@ -15,19 +15,21 @@ namespace ProyectoFinal.BLL
         public static bool Guardar(Usuarios usuario)
         {
             bool paso = false;
-            Contexto contexto = new Contexto();
+            Contexto db = new Contexto();
             try
             {
-                if (contexto.Usuario.Add(usuario) != null)
-                {
-                    contexto.SaveChanges();
-                    paso = true;
-                }
-                contexto.Dispose();
+                if (db.Usuario.Add(usuario) != null)
+                    paso = db.SaveChanges() > 0;
+                
+                
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                db.Dispose();
             }
             return paso;
         }

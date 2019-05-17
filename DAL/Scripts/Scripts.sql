@@ -4,7 +4,7 @@ USE UsuariosDb
 GO
 CREATE TABLE Usuarios
 (
-	Id int primary key identity,
+	UsuarioId int primary key identity,
 	Nombre varchar(30),
 	Email varchar(30),
 	NivelUsuario int,
