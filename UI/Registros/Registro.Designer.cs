@@ -250,7 +250,7 @@
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.GuardarButton);
             this.Name = "Registro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
