@@ -48,14 +48,16 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 21);
+            this.label1.Location = new System.Drawing.Point(32, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -64,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 51);
+            this.label2.Location = new System.Drawing.Point(32, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -73,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 77);
+            this.label3.Location = new System.Drawing.Point(32, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
@@ -82,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 102);
+            this.label4.Location = new System.Drawing.Point(32, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 3;
@@ -90,21 +92,21 @@
             // 
             // NombreTextBox
             // 
-            this.NombreTextBox.Location = new System.Drawing.Point(120, 48);
+            this.NombreTextBox.Location = new System.Drawing.Point(123, 48);
             this.NombreTextBox.Name = "NombreTextBox";
             this.NombreTextBox.Size = new System.Drawing.Size(133, 20);
             this.NombreTextBox.TabIndex = 4;
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(120, 74);
+            this.EmailTextBox.Location = new System.Drawing.Point(123, 74);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(133, 20);
             this.EmailTextBox.TabIndex = 5;
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(120, 21);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(123, 21);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(89, 20);
             this.IdNumericUpDown.TabIndex = 6;
@@ -112,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 130);
+            this.label5.Location = new System.Drawing.Point(32, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 8;
@@ -120,22 +122,23 @@
             // 
             // UsuarioTextBox
             // 
-            this.UsuarioTextBox.Location = new System.Drawing.Point(120, 127);
+            this.UsuarioTextBox.Location = new System.Drawing.Point(123, 127);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(133, 20);
             this.UsuarioTextBox.TabIndex = 9;
             // 
             // ClaveTextBox
             // 
-            this.ClaveTextBox.Location = new System.Drawing.Point(120, 153);
+            this.ClaveTextBox.Location = new System.Drawing.Point(123, 153);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.Size = new System.Drawing.Size(133, 20);
             this.ClaveTextBox.TabIndex = 10;
+            this.ClaveTextBox.UseSystemPasswordChar = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 156);
+            this.label6.Location = new System.Drawing.Point(32, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 11;
@@ -144,7 +147,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 183);
+            this.label7.Location = new System.Drawing.Point(32, 183);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 12;
@@ -152,7 +155,7 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Location = new System.Drawing.Point(225, 18);
+            this.BuscarButton.Location = new System.Drawing.Point(228, 18);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(75, 23);
             this.BuscarButton.TabIndex = 14;
@@ -164,7 +167,7 @@
             // 
             this.FechaIngresoDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaIngresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaIngresoDateTimePicker.Location = new System.Drawing.Point(120, 180);
+            this.FechaIngresoDateTimePicker.Location = new System.Drawing.Point(123, 180);
             this.FechaIngresoDateTimePicker.Name = "FechaIngresoDateTimePicker";
             this.FechaIngresoDateTimePicker.Size = new System.Drawing.Size(133, 20);
             this.FechaIngresoDateTimePicker.TabIndex = 17;
@@ -175,14 +178,14 @@
             this.NivelUsuarioComboBox.Items.AddRange(new object[] {
             "Administrador",
             "Supervisor"});
-            this.NivelUsuarioComboBox.Location = new System.Drawing.Point(120, 101);
+            this.NivelUsuarioComboBox.Location = new System.Drawing.Point(123, 101);
             this.NivelUsuarioComboBox.Name = "NivelUsuarioComboBox";
             this.NivelUsuarioComboBox.Size = new System.Drawing.Size(133, 21);
             this.NivelUsuarioComboBox.TabIndex = 19;
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Location = new System.Drawing.Point(21, 231);
+            this.NuevoButton.Location = new System.Drawing.Point(36, 275);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 23);
             this.NuevoButton.TabIndex = 20;
@@ -192,7 +195,7 @@
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Location = new System.Drawing.Point(103, 230);
+            this.GuardarButton.Location = new System.Drawing.Point(135, 275);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 23);
             this.GuardarButton.TabIndex = 21;
@@ -202,7 +205,7 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Location = new System.Drawing.Point(185, 229);
+            this.EliminarButton.Location = new System.Drawing.Point(240, 275);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 23);
             this.EliminarButton.TabIndex = 22;
@@ -214,36 +217,47 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.NivelUsuarioComboBox);
+            this.groupBox1.Controls.Add(this.NombreTextBox);
+            this.groupBox1.Controls.Add(this.FechaIngresoDateTimePicker);
+            this.groupBox1.Controls.Add(this.EmailTextBox);
+            this.groupBox1.Controls.Add(this.BuscarButton);
+            this.groupBox1.Controls.Add(this.IdNumericUpDown);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.UsuarioTextBox);
+            this.groupBox1.Controls.Add(this.ClaveTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(318, 238);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 298);
+            this.ClientSize = new System.Drawing.Size(344, 322);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.EliminarButton);
-            this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Controls.Add(this.NivelUsuarioComboBox);
-            this.Controls.Add(this.FechaIngresoDateTimePicker);
-            this.Controls.Add(this.BuscarButton);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.ClaveTextBox);
-            this.Controls.Add(this.UsuarioTextBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.IdNumericUpDown);
-            this.Controls.Add(this.EmailTextBox);
-            this.Controls.Add(this.NombreTextBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GuardarButton);
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -268,5 +282,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
