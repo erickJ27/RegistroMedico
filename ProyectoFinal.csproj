@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\Registros\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
@@ -105,6 +106,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Scripts.sql" />
+    <None Include="Resources\Delete-group-icon.png" />
+    <None Include="Resources\Save2-icon.png" />
+    <None Include="Resources\Actions-contact-new-icon.png" />
+    <None Include="Resources\search3-icon.png" />
+    <None Include="Resources\search2-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
