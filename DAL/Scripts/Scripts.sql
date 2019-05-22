@@ -15,3 +15,15 @@ CREATE TABLE Usuarios
 
 
 );
+CREATE TABLE Cargos 
+(
+	CargoId int primary key identity,
+	Descripcion varchar(60),
+
+
+);
+
+USE UsuariosDb
+EXEC sp_rename'Usuarios.Nombre','Nombres';
+
+
