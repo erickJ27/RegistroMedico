@@ -13,10 +13,10 @@ using ProyectoFinal.BLL;
 
 namespace ProyectoFinal.UI.Registros
 {
-    public partial class rRegistro : Form
+    public partial class rUsuario : Form
     {
        
-        public rRegistro()
+        public rUsuario()
         {
             InitializeComponent();
         }
