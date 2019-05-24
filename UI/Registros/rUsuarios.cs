@@ -47,7 +47,7 @@ namespace ProyectoFinal.UI.Registros
             usuario.Nombres = NombreTextBox.Text;
             usuario.Email = EmailTextBox.Text;
 
-            if (NivelUsuarioComboBox.Text == "Administrador")
+            if (NivelUsuarioComboBox.SelectedIndex==0)
                 usuario.NivelUsuario = 1;
             else
                 usuario.NivelUsuario = 2;
