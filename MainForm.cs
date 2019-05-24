@@ -22,5 +22,11 @@ namespace ProyectoFinal
             rUsuarios vent = new rUsuarios();
             vent.Show();
         }
+
+        private void RCargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rCargos vent = new rCargos();
+            vent.Show();
+        }
     }
 }
