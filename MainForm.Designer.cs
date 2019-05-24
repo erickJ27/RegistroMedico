@@ -33,6 +33,7 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rCargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,8 @@
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cUsuariosToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -75,6 +78,13 @@
             this.rCargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rCargosToolStripMenuItem.Text = "rCargos";
             this.rCargosToolStripMenuItem.Click += new System.EventHandler(this.RCargosToolStripMenuItem_Click);
+            // 
+            // cUsuariosToolStripMenuItem
+            // 
+            this.cUsuariosToolStripMenuItem.Name = "cUsuariosToolStripMenuItem";
+            this.cUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cUsuariosToolStripMenuItem.Text = "cUsuarios";
+            this.cUsuariosToolStripMenuItem.Click += new System.EventHandler(this.CUsuariosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -100,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rCargosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cUsuariosToolStripMenuItem;
     }
 }
 

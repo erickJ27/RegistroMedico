@@ -44,7 +44,7 @@ namespace ProyectoFinal.UI.Registros
         {
             Usuarios usuario = new Usuarios();
             usuario.UsuarioId = Convert.ToInt32(IdNumericUpDown.Value);
-            usuario.Nombre = NombreTextBox.Text;
+            usuario.Nombres = NombreTextBox.Text;
             usuario.Email = EmailTextBox.Text;
 
             if (NivelUsuarioComboBox.Text == "Administrador")
@@ -69,7 +69,7 @@ namespace ProyectoFinal.UI.Registros
         private void LlenarCampo(Usuarios usuario)
         {
             IdNumericUpDown.Value = usuario.UsuarioId;
-            NombreTextBox.Text = usuario.Nombre;
+            NombreTextBox.Text = usuario.Nombres;
             EmailTextBox.Text = usuario.Email;
 
             string adm = "Administrador";

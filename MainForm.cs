@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoFinal.UI.Registros;
+using ProyectoFinal.UI.Consultas;
 namespace ProyectoFinal
 {
     public partial class MainForm : Form
@@ -26,6 +27,12 @@ namespace ProyectoFinal
         private void RCargosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rCargos vent = new rCargos();
+            vent.Show();
+        }
+
+        private void CUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cUsuarios vent = new cUsuarios();
             vent.Show();
         }
     }
