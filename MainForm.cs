@@ -19,7 +19,7 @@ namespace ProyectoFinal
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rUsuario vent = new rUsuario();
+            rUsuarios vent = new rUsuarios();
             vent.Show();
         }
     }

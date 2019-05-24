@@ -72,11 +72,11 @@
     <Compile Include="UI\Registros\rCargos.Designer.cs">
       <DependentUpon>rCargos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rUsuario.cs">
+    <Compile Include="UI\Registros\rUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\rUsuario.Designer.cs">
-      <DependentUpon>rUsuario.cs</DependentUpon>
+    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -94,8 +94,8 @@
     <EmbeddedResource Include="UI\Registros\rCargos.resx">
       <DependentUpon>rCargos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rUsuario.resx">
-      <DependentUpon>rUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
