@@ -10,12 +10,12 @@ namespace ProyectoFinal.Entidades
     public class Cargos
     {
         [Key]
-        public int CargosId { get; set; }
+        public int CargoId { get; set; }
         public string Descripcion { get; set; }
 
         public Cargos()
         {
-            CargosId = 0;
+            CargoId = 0;
             Descripcion = string.Empty;
 
         }

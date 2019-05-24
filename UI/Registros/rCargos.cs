@@ -33,7 +33,7 @@ namespace ProyectoFinal.UI.Registros
         private Cargos LlenarClase()
         {
             Cargos cargo = new Cargos();
-            cargo.CargosId = Convert.ToInt32(IdNumericUpDown.Value);
+            cargo.CargoId = Convert.ToInt32(IdNumericUpDown.Value);
             cargo.Descripcion = DescripcionRichTextBox.Text;
 
             return cargo;
@@ -46,7 +46,7 @@ namespace ProyectoFinal.UI.Registros
         private void LlenarCampo(Cargos cargo)
         {
 
-            IdNumericUpDown.Value = cargo.CargosId;
+            IdNumericUpDown.Value = cargo.CargoId;
             DescripcionRichTextBox.Text = cargo.Descripcion;
 
         }
@@ -107,12 +107,12 @@ namespace ProyectoFinal.UI.Registros
 
             if(cargo!= null)
             {
-                MessageBox.Show("Usuario Encontrado");
+                MessageBox.Show("Cargo Encontrado");
                 LlenarCampo(cargo);
             }
             else
             {
-                MessageBox.Show("Usuario no encontrado");
+                MessageBox.Show("Cargo no encontrado");
             }
         }
 
