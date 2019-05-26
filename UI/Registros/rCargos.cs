@@ -21,7 +21,7 @@ namespace ProyectoFinal.UI.Registros
         private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
-            DescripcionRichTextBox.Text = string.Empty;
+            DescripcionTextBox.Text = string.Empty;
             MyErrorProvider.Clear();
         }
 
@@ -34,7 +34,7 @@ namespace ProyectoFinal.UI.Registros
         {
             Cargos cargo = new Cargos();
             cargo.CargoId = Convert.ToInt32(IdNumericUpDown.Value);
-            cargo.Descripcion = DescripcionRichTextBox.Text;
+            cargo.Descripcion = DescripcionTextBox.Text;
 
             return cargo;
         }
@@ -47,7 +47,7 @@ namespace ProyectoFinal.UI.Registros
         {
 
             IdNumericUpDown.Value = cargo.CargoId;
-            DescripcionRichTextBox.Text = cargo.Descripcion;
+            DescripcionTextBox.Text = cargo.Descripcion;
 
         }
         private bool Validar()
@@ -55,10 +55,10 @@ namespace ProyectoFinal.UI.Registros
             bool paso = true;
             MyErrorProvider.Clear();
 
-            if (DescripcionRichTextBox.Text == String.Empty)
+            if (DescripcionTextBox.Text == String.Empty)
             {
-                MyErrorProvider.SetError(DescripcionRichTextBox, "El Campo Descripcion no puede estar vacio");
-                DescripcionRichTextBox.Focus();
+                MyErrorProvider.SetError(DescripcionTextBox, "El Campo Descripcion no puede estar vacio");
+                DescripcionTextBox.Focus();
                 paso = false;
             }
 
