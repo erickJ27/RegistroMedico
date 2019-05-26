@@ -35,5 +35,16 @@ namespace ProyectoFinal
             cUsuarios vent = new cUsuarios();
             vent.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CCargosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cCargos vent = new cCargos();
+            vent.Show();
+        }
     }
 }

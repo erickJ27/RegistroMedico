@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal", "ProyectoFinal.csproj", "{238DE198-2F7F-4CBE-BE97-CF78A397ED2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema_de_ventas", "Sistema_de_ventas.csproj", "{238DE198-2F7F-4CBE-BE97-CF78A397ED2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinalTests", "..\ProyectoFinalTests\ProyectoFinalTests.csproj", "{DDBE17CF-F2D2-45AB-BC0A-B604A3412234}"
 EndProject

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rCargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cCargosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,20 +66,21 @@
             this.usuariosToolStripMenuItem.Text = "rUsuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.UsuariosToolStripMenuItem_Click);
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cUsuariosToolStripMenuItem});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
             // rCargosToolStripMenuItem
             // 
             this.rCargosToolStripMenuItem.Name = "rCargosToolStripMenuItem";
             this.rCargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rCargosToolStripMenuItem.Text = "rCargos";
             this.rCargosToolStripMenuItem.Click += new System.EventHandler(this.RCargosToolStripMenuItem_Click);
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cUsuariosToolStripMenuItem,
+            this.cCargosToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // cUsuariosToolStripMenuItem
             // 
@@ -86,16 +89,25 @@
             this.cUsuariosToolStripMenuItem.Text = "cUsuarios";
             this.cUsuariosToolStripMenuItem.Click += new System.EventHandler(this.CUsuariosToolStripMenuItem_Click);
             // 
+            // cCargosToolStripMenuItem
+            // 
+            this.cCargosToolStripMenuItem.Name = "cCargosToolStripMenuItem";
+            this.cCargosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cCargosToolStripMenuItem.Text = "cCargos";
+            this.cCargosToolStripMenuItem.Click += new System.EventHandler(this.CCargosToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema";
+            this.Text = "Sistema de ventas";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -111,6 +123,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rCargosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cCargosToolStripMenuItem;
     }
 }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cUsuarios));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FiltrarComboBox = new System.Windows.Forms.ComboBox();
@@ -46,16 +47,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 27);
+            this.label1.Location = new System.Drawing.Point(231, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Filtrar";
+            this.label1.Text = "Filtro";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 27);
+            this.label2.Location = new System.Drawing.Point(369, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
@@ -68,32 +69,36 @@
             "Todo",
             "ID",
             "Nombre"});
-            this.FiltrarComboBox.Location = new System.Drawing.Point(53, 24);
+            this.FiltrarComboBox.Location = new System.Drawing.Point(234, 42);
             this.FiltrarComboBox.Name = "FiltrarComboBox";
             this.FiltrarComboBox.Size = new System.Drawing.Size(121, 21);
             this.FiltrarComboBox.TabIndex = 3;
             // 
             // CriterioTextBox
             // 
-            this.CriterioTextBox.Location = new System.Drawing.Point(225, 24);
+            this.CriterioTextBox.Location = new System.Drawing.Point(372, 43);
             this.CriterioTextBox.Name = "CriterioTextBox";
-            this.CriterioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CriterioTextBox.Size = new System.Drawing.Size(267, 20);
             this.CriterioTextBox.TabIndex = 4;
+            this.CriterioTextBox.TextChanged += new System.EventHandler(this.CriterioTextBox_TextChanged);
             // 
             // ConsultarButton
             // 
+            this.ConsultarButton.Image = global::ProyectoFinal.Properties.Resources.search2_icon;
+            this.ConsultarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConsultarButton.Location = new System.Drawing.Point(645, 25);
             this.ConsultarButton.Name = "ConsultarButton";
-            this.ConsultarButton.Size = new System.Drawing.Size(75, 23);
+            this.ConsultarButton.Size = new System.Drawing.Size(75, 38);
             this.ConsultarButton.TabIndex = 5;
             this.ConsultarButton.Text = "Consultar";
+            this.ConsultarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultarButton.UseVisualStyleBackColor = true;
             this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 27);
+            this.label3.Location = new System.Drawing.Point(15, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 6;
@@ -103,7 +108,7 @@
             // 
             this.DesdeDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdeDateTimePicker.Location = new System.Drawing.Point(378, 24);
+            this.DesdeDateTimePicker.Location = new System.Drawing.Point(18, 42);
             this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
             this.DesdeDateTimePicker.Size = new System.Drawing.Size(94, 20);
             this.DesdeDateTimePicker.TabIndex = 7;
@@ -111,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(478, 27);
+            this.label4.Location = new System.Drawing.Point(122, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 8;
@@ -121,7 +126,7 @@
             // 
             this.HastaDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.HastaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HastaDateTimePicker.Location = new System.Drawing.Point(519, 25);
+            this.HastaDateTimePicker.Location = new System.Drawing.Point(125, 42);
             this.HastaDateTimePicker.Name = "HastaDateTimePicker";
             this.HastaDateTimePicker.Size = new System.Drawing.Size(94, 20);
             this.HastaDateTimePicker.TabIndex = 9;
@@ -147,9 +152,9 @@
             // ConsultaDataGridView
             // 
             this.ConsultaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaDataGridView.Location = new System.Drawing.Point(18, 61);
+            this.ConsultaDataGridView.Location = new System.Drawing.Point(18, 78);
             this.ConsultaDataGridView.Name = "ConsultaDataGridView";
-            this.ConsultaDataGridView.Size = new System.Drawing.Size(701, 317);
+            this.ConsultaDataGridView.Size = new System.Drawing.Size(701, 300);
             this.ConsultaDataGridView.TabIndex = 10;
             // 
             // cUsuarios
@@ -158,6 +163,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 434);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cUsuarios";

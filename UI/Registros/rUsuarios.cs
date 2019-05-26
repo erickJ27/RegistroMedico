@@ -28,7 +28,7 @@ namespace ProyectoFinal.UI.Registros
         private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
-            NombreTextBox.Text = string.Empty;
+            NombresTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
             NivelUsuarioComboBox.Text = string.Empty;
             UsuarioTextBox.Text = string.Empty;
@@ -44,7 +44,7 @@ namespace ProyectoFinal.UI.Registros
         {
             Usuarios usuario = new Usuarios();
             usuario.UsuarioId = Convert.ToInt32(IdNumericUpDown.Value);
-            usuario.Nombres = NombreTextBox.Text;
+            usuario.Nombres = NombresTextBox.Text;
             usuario.Email = EmailTextBox.Text;
 
             if (NivelUsuarioComboBox.SelectedIndex==0)
@@ -69,7 +69,7 @@ namespace ProyectoFinal.UI.Registros
         private void LlenarCampo(Usuarios usuario)
         {
             IdNumericUpDown.Value = usuario.UsuarioId;
-            NombreTextBox.Text = usuario.Nombres;
+            NombresTextBox.Text = usuario.Nombres;
             EmailTextBox.Text = usuario.Email;
 
             string adm = "Administrador";
@@ -99,10 +99,10 @@ namespace ProyectoFinal.UI.Registros
             bool paso = true;
             MyErrorProvider.Clear();
 
-            if (NombreTextBox.Text == string.Empty)
+            if (NombresTextBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(NombreTextBox, "El campo Nombre no puede estar vacio");
-                NombreTextBox.Focus();
+                MyErrorProvider.SetError(NombresTextBox, "El campo Nombre no puede estar vacio");
+                NombresTextBox.Focus();
                 paso = false;
             }
 

@@ -35,11 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.DescripcionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
@@ -72,14 +72,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DescripcionTextBox);
             this.groupBox1.Controls.Add(this.BuscarButton);
-            this.groupBox1.Controls.Add(this.DescripcionRichTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.IdNumericUpDown);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 251);
+            this.groupBox1.Size = new System.Drawing.Size(374, 130);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -96,19 +96,11 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // DescripcionRichTextBox
-            // 
-            this.DescripcionRichTextBox.Location = new System.Drawing.Point(101, 74);
-            this.DescripcionRichTextBox.Name = "DescripcionRichTextBox";
-            this.DescripcionRichTextBox.Size = new System.Drawing.Size(237, 150);
-            this.DescripcionRichTextBox.TabIndex = 3;
-            this.DescripcionRichTextBox.Text = "";
-            // 
             // EliminarButton
             // 
             this.EliminarButton.Image = global::ProyectoFinal.Properties.Resources.Button_Close_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EliminarButton.Location = new System.Drawing.Point(275, 283);
+            this.EliminarButton.Location = new System.Drawing.Point(277, 171);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 37);
             this.EliminarButton.TabIndex = 6;
@@ -121,7 +113,7 @@
             // 
             this.GuardarButton.Image = global::ProyectoFinal.Properties.Resources.Save2_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GuardarButton.Location = new System.Drawing.Point(160, 283);
+            this.GuardarButton.Location = new System.Drawing.Point(162, 171);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 37);
             this.GuardarButton.TabIndex = 5;
@@ -134,7 +126,7 @@
             // 
             this.NuevoButton.Image = global::ProyectoFinal.Properties.Resources.new_file_icon;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NuevoButton.Location = new System.Drawing.Point(41, 283);
+            this.NuevoButton.Location = new System.Drawing.Point(43, 171);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 37);
             this.NuevoButton.TabIndex = 4;
@@ -147,11 +139,18 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // DescripcionTextBox
+            // 
+            this.DescripcionTextBox.Location = new System.Drawing.Point(101, 74);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(169, 20);
+            this.DescripcionTextBox.TabIndex = 5;
+            // 
             // rCargos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 343);
+            this.ClientSize = new System.Drawing.Size(400, 238);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -174,11 +173,11 @@
         private System.Windows.Forms.NumericUpDown IdNumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox DescripcionRichTextBox;
         private System.Windows.Forms.Button BuscarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
     }
 }

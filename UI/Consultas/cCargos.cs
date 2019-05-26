@@ -12,52 +12,48 @@ using ProyectoFinal.BLL;
 
 namespace ProyectoFinal.UI.Consultas
 {
-    public partial class cUsuarios : Form
+    public partial class cCargos : Form
     {
-        public cUsuarios()
+        public cCargos()
         {
             InitializeComponent();
         }
 
         private void ConsultarButton_Click(object sender, EventArgs e)
         {
-            var listado = new List<Usuarios>();
+            var listado = new List<Cargos>();
 
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltrarComboBox.SelectedIndex)
                 {
                     case 0:
-                        listado = UsuariosBLL.GetList(p => true);
+                        listado = CargosBLL.GetList(p => true);
                         break;
                     case 1:
                         int id = Convert.ToInt32(CriterioTextBox.Text);
-                        listado = UsuariosBLL.GetList(p => p.UsuarioId == id);
+                        listado = CargosBLL.GetList(p => p.CargoId == id);
                         break;
                     case 2:
-                        listado = UsuariosBLL.GetList(p => p.Nombres.Contains(CriterioTextBox.Text));
+                        listado = CargosBLL.GetList(p => p.Descripcion.Contains(CriterioTextBox.Text));
                         break;
 
                 }
 
-                listado = listado.Where(c => c.FechaIngreso.Date >= DesdeDateTimePicker.Value.Date && c.FechaIngreso.Date <= HastaDateTimePicker.Value.Date).ToList();
+                listado = listado.ToList();
             }
             else
             {
-                listado = UsuariosBLL.GetList(p => true);
+                listado = CargosBLL.GetList(p => true);
             }
             ConsultaDataGridView.DataSource = null;
             ConsultaDataGridView.DataSource = listado;
         }
 
-        private void CUsuarios_Load(object sender, EventArgs e)
+        private void CCargos_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void CriterioTextBox_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
+    
 }
