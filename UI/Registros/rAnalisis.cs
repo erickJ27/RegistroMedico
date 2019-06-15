@@ -21,7 +21,9 @@ namespace Sistema_Consulta.UI.Registros
         {
             InitializeComponent();
             ListadoUsuarios();
-            
+            ListadoTipoAnalisis();
+
+
         }
         private void Limpiar()
         {
@@ -67,8 +69,20 @@ namespace Sistema_Consulta.UI.Registros
 
             listado = UsuariosBLL.GetList(p => true);
             UsuarioComboBox.DataSource = listado;
-            UsuarioComboBox.DisplayMember = "Usuario";
+            UsuarioComboBox.DisplayMember = "Usuarios";
             UsuarioComboBox.ValueMember = "UsuarioId";
+
+            
+
+        }
+        private void ListadoTipoAnalisis()
+        {
+            var listado = new List<TipoAnalisis>();
+
+            listado = TipoAnalisisBLL.GetList(p => true);
+            TipoAnalisisComboBox.DataSource = listado;
+            TipoAnalisisComboBox.DisplayMember = "TipoAnalisis";
+            TipoAnalisisComboBox.ValueMember = "TipoId";
 
             UsuarioComboBox.Text = string.Empty;
 
