@@ -22,6 +22,7 @@ namespace Sistema_Consulta.UI.Registros
             InitializeComponent();
             ListadoUsuarios();
             ListadoTipoAnalisis();
+            this.Detalle = new List<AnalisisDetalle>();
 
 
         }
@@ -167,8 +168,11 @@ namespace Sistema_Consulta.UI.Registros
                     TipoId:Convert.ToInt32(TipoAnalisisComboBox.Text), 
                     Resultado: ResultadoTextBox.Text
                     )
-                ); ;
+                ); 
             CargarGrid();
+            TipoAnalisisComboBox.Focus();
+            TipoAnalisisComboBox.Text = Convert.ToString(1);
+            ResultadoTextBox.Clear();
 
         }
 
@@ -195,6 +199,35 @@ namespace Sistema_Consulta.UI.Registros
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MyErrorProvider.SetError(IdNumericUpDown, "No se puede eliminar un analisis que no existe");
+        }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            if (IdNumericUpDown.Value == 0)
+            {
+                MessageBox.Show("Coloque un id valido");
+            }
+            else
+            {
+                int id;
+                Analisis analisis = new Analisis();
+                int.TryParse(IdNumericUpDown.Text, out id);
+
+                Limpiar();
+
+                analisis = AnalisisBLL.Buscar(id);
+
+                if (analisis != null)
+                {
+                    MessageBox.Show("Usuario Encontrado");
+                    LLenaCampos(analisis);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario no encontrado");
+                }
+            }
+            
         }
     }
 }
