@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinal.UI.Consultas
+﻿namespace Sistema_Consulta.UI.Consultas
 {
     partial class cUsuarios
     {
@@ -84,7 +84,7 @@
             // 
             // ConsultarButton
             // 
-            this.ConsultarButton.Image = global::ProyectoFinal.Properties.Resources.search2_icon;
+            this.ConsultarButton.Image = global::Sistema_Consulta.Properties.Resources.search2_icon;
             this.ConsultarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConsultarButton.Location = new System.Drawing.Point(645, 25);
             this.ConsultarButton.Name = "ConsultarButton";

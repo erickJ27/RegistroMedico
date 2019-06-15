@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace Sistema_Consulta.Entidades
 {
-    public class Cargos
+    public class TipoAnalisis
     {
         [Key]
-        public int CargoId { get; set; }
+        public int TipoId { get; set; }
         public string Descripcion { get; set; }
 
-        public Cargos()
+        public TipoAnalisis()
         {
-            CargoId = 0;
+            TipoId = 0;
             Descripcion = string.Empty;
 
         }
-
     }
 }

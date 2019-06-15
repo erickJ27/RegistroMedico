@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoFinal.Entidades;
-using ProyectoFinal.BLL;
+using Sistema_Consulta.Entidades;
+using Sistema_Consulta.BLL;
 
 
-namespace ProyectoFinal.UI.Registros
+namespace Sistema_Consulta.UI.Registros
 {
     public partial class rUsuarios : Form
     {

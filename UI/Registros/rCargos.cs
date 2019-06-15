@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoFinal.Entidades;
-using ProyectoFinal.BLL;
-namespace ProyectoFinal.UI.Registros
+using Sistema_Consulta.Entidades;
+using Sistema_Consulta.BLL;
+
+
+namespace Sistema_Consulta.UI.Registros
 {
     public partial class rCargos : Form
     {
@@ -118,7 +120,7 @@ namespace ProyectoFinal.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            {
+            
                 MyErrorProvider.Clear();
 
                 int id;
@@ -131,7 +133,7 @@ namespace ProyectoFinal.UI.Registros
                 else
                     MyErrorProvider.SetError(IdNumericUpDown, "No se puede eliminar un usuario que no existe");
 
-            }
+            
         }
     }
 }

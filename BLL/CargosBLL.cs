@@ -1,6 +1,6 @@
 ﻿using System;
-using ProyectoFinal.DAL;
-using ProyectoFinal.Entidades;
+using Sistema_Consulta.DAL;
+using Sistema_Consulta.Entidades;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoFinal.BLL
+namespace Sistema_Consulta.BLL
 {
     public class CargosBLL
     {

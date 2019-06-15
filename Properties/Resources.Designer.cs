@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoFinal.Properties {
+namespace Sistema_Consulta.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ProyectoFinal.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProyectoFinal.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Sistema_Consulta.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -76,6 +76,16 @@ namespace ProyectoFinal.Properties {
         internal static System.Drawing.Bitmap Button_Close_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_2_icon {
+            get {
+                object obj = ResourceManager.GetObject("Close-2-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

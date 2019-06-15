@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinal.UI.Consultas
+﻿namespace Sistema_Consulta.UI.Consultas
 {
     partial class cCargos
     {
@@ -101,7 +101,7 @@
             // 
             // ConsultarButton
             // 
-            this.ConsultarButton.Image = global::ProyectoFinal.Properties.Resources.search2_icon;
+            this.ConsultarButton.Image = global::Sistema_Consulta.Properties.Resources.search2_icon;
             this.ConsultarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConsultarButton.Location = new System.Drawing.Point(418, 31);
             this.ConsultarButton.Name = "ConsultarButton";
@@ -120,6 +120,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cCargos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cCargos";
             this.Load += new System.EventHandler(this.CCargos_Load);
             this.groupBox1.ResumeLayout(false);

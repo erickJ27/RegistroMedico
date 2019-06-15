@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinal.UI.Registros
+﻿namespace Sistema_Consulta.UI.Registros
 {
     partial class rUsuarios
     {
@@ -203,7 +203,7 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::ProyectoFinal.Properties.Resources.search2_icon;
+            this.BuscarButton.Image = global::Sistema_Consulta.Properties.Resources.search2_icon;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BuscarButton.Location = new System.Drawing.Point(228, 18);
             this.BuscarButton.Name = "BuscarButton";
@@ -216,7 +216,7 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = global::ProyectoFinal.Properties.Resources.Delete_group_icon;
+            this.EliminarButton.Image = global::Sistema_Consulta.Properties.Resources.Delete_group_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EliminarButton.Location = new System.Drawing.Point(240, 275);
             this.EliminarButton.Name = "EliminarButton";
@@ -229,7 +229,7 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Image = global::ProyectoFinal.Properties.Resources.Actions_contact_new_icon;
+            this.NuevoButton.Image = global::Sistema_Consulta.Properties.Resources.Actions_contact_new_icon;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NuevoButton.Location = new System.Drawing.Point(36, 275);
             this.NuevoButton.Name = "NuevoButton";
@@ -242,7 +242,7 @@
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = global::ProyectoFinal.Properties.Resources.Save2_icon;
+            this.GuardarButton.Image = global::Sistema_Consulta.Properties.Resources.Save2_icon;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GuardarButton.Location = new System.Drawing.Point(135, 275);
             this.GuardarButton.Name = "GuardarButton";

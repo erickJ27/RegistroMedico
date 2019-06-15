@@ -1,27 +1,47 @@
-﻿using Sistema_Consulta.DAL;
-using Sistema_Consulta.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Sistema_Consulta.Entidades;
+using Sistema_Consulta.DAL;
+using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Sistema_Consulta.BLL
 {
-    public class UsuariosBLL
+    public class TipoAnalisisBLL
     {
-        public static bool Guardar(Usuarios usuario)
+        public static bool Guardar(TipoAnalisis tipoAnalisi)
         {
             bool paso = false;
+
             Contexto db = new Contexto();
             try
             {
-                if (db.Usuario.Add(usuario) != null)
+                if (db.TipoAnalisi.Add(tipoAnalisi) != null)
                     paso = db.SaveChanges() > 0;
-                
-                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+
+            return paso;
+        }
+        public static bool Modificar(TipoAnalisis tipoAnalisis)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            try
+            {
+                db.Entry(tipoAnalisis).State = EntityState.Modified;
+                paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
             {
@@ -33,43 +53,21 @@ namespace Sistema_Consulta.BLL
             }
             return paso;
         }
-        public static bool Modificar(Usuarios usuario)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-            try
-            {
-                contexto.Entry(usuario).State = EntityState.Modified;
-                if (contexto.SaveChanges() > 0)
-                {
-                    paso = true;
-                }
-                contexto.Dispose();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            return paso;
-
-        }
-
         public static bool Eliminar(int id)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
             try
             {
-                Usuarios usuario = contexto.Usuario.Find(id);
+                TipoAnalisis ubicacion = contexto.TipoAnalisi.Find(id);
 
-                contexto.Usuario.Remove(usuario);
+                contexto.TipoAnalisi.Remove(ubicacion);
 
                 if (contexto.SaveChanges() > 0)
                 {
                     paso = true;
                 }
                 contexto.Dispose();
-
             }
             catch (Exception)
             {
@@ -77,46 +75,44 @@ namespace Sistema_Consulta.BLL
             }
             return paso;
         }
-
-        public static Usuarios Buscar(int id)
+        public static TipoAnalisis Buscar(int id)
         {
-            Contexto contexto = new Contexto();
-            Usuarios usuario = new Usuarios();
+            Contexto db = new Contexto();
+            TipoAnalisis tipoAnalisi = new TipoAnalisis();
             try
             {
-                usuario = contexto.Usuario.Find(id);
-                contexto.Dispose();
+                tipoAnalisi = db.TipoAnalisi.Find(id);
             }
-            catch (Exception)
+            catch
             {
                 throw;
+
             }
             finally
             {
-                contexto.Dispose();
+                db.Dispose();
             }
-            return usuario;
+            return tipoAnalisi;
         }
-
-        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> usuario)
+        public static List<TipoAnalisis> GetList(Expression<Func<TipoAnalisis, bool>> tipoAnalisi)
         {
-            List<Usuarios> Lista = new List<Usuarios>();
+            List<TipoAnalisis> Lista = new List<TipoAnalisis>();
             Contexto db = new Contexto();
+
             try
             {
-                Lista = db.Usuario.Where(usuario).ToList();
+                Lista = db.TipoAnalisi.Where(tipoAnalisi).ToList();
             }
-            catch(Exception)
+            catch
             {
                 throw;
             }
             finally
             {
                 db.Dispose();
-
             }
             return Lista;
-
         }
+
     }
 }

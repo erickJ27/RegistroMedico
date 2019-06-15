@@ -5,8 +5,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{238DE198-2F7F-4CBE-BE97-CF78A397ED2B}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ProyectoFinal</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sistema_Consulta</RootNamespace>
     <AssemblyName>ProyectoFinal</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -53,11 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AnalisisBLL.cs" />
     <Compile Include="BLL\CargosBLL.cs" />
+    <Compile Include="BLL\TipoAnalisisBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Analisis.cs" />
+    <Compile Include="Entidades\AnalisisDetalle.cs" />
     <Compile Include="Entidades\Cargo.cs" />
-    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Entidades\TipoAnalisis.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +86,23 @@
     <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
       <DependentUpon>cUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rAnalisis.Designer.cs">
+      <DependentUpon>rAnalisis.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rCargos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\rCargos.Designer.cs">
       <DependentUpon>rCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rTipoAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rTipoAnalisis.Designer.cs">
+      <DependentUpon>rTipoAnalisis.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rUsuarios.cs">
       <SubType>Form</SubType>
@@ -109,8 +129,14 @@
     <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rAnalisis.resx">
+      <DependentUpon>rAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCargos.resx">
       <DependentUpon>rCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rTipoAnalisis.resx">
+      <DependentUpon>rTipoAnalisis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>
@@ -134,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Scripts.sql" />
+    <None Include="Resources\Close-2-icon.png" />
     <None Include="Resources\Button-Close-icon.png" />
     <None Include="Resources\new-file-icon.png" />
     <None Include="Resources\Delete-group-icon.png" />
